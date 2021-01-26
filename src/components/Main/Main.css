@@ -3,5 +3,5 @@
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: 1fr 1fr;
-	grid-template-areas: 'question question' 'answers info' 'button button';
+	grid-template-areas: 'question question' 'answers answer' 'button button';
 }
