@@ -1,8 +1,9 @@
 import React from 'react';
+import classes from './CustomButton.css'
 
 const customButton = (props) => {
   return (
-		<button>{props.children}</button>
+		<button className={classes.button} disabled={props.disabled} onClick={() => {}}>{props.children}</button>
   );
 };
 
