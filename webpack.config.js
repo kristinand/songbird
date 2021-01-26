@@ -14,9 +14,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.json'],
-    // alias: {
-    //   '@assets': path.resolve(__dirname, 'src/assets')
-    // },
+    alias: {
+      '@assets': path.resolve(__dirname, 'src/assets')
+    },
   },
   plugins: [
     new HTMLWebpackPlugin({
