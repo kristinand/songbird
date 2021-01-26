@@ -20,5 +20,6 @@
 
 .title {
   font-size: 2rem;
-  border-bottom: 1px solid #444;
+  font-weight: normal;
+  border-bottom: 1px solid #555;
 }
