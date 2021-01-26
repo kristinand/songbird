@@ -1,0 +1,4 @@
+.answers {
+	grid-area: answers;
+	border: 1px solid #444;
+}

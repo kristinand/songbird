@@ -1,5 +1,6 @@
 .button {
 	padding: 0.65rem 0;
+	grid-area: button;
 	width: 100%;
 	font-family: 'Raleway', sans-serif;
 	color: white;

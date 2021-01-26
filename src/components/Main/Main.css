@@ -1,0 +1,7 @@
+.main {
+	margin-top: 1rem;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'question question' 'answers info' 'button button';
+}

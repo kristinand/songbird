@@ -3,14 +3,14 @@ import classes from './Main.css';
 import Question from './Question/Question';
 import Answers from './Answers/Answers';
 import CustomButton from './CustomButton/CustomButton';
-import BirdInfo from './BirdInfo/BirdInfo';
+import SelectedBird from './SelectedBird/SelectedBird';
 
 const main = (props) => {
 	return (
 		<main className={classes.main}>
 			<Question />
 			<Answers />
-			<BirdInfo />
+			<SelectedBird />
 			<CustomButton disabled={true}>Следующий вопрос</CustomButton>
 		</main>
 	)

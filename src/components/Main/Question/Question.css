@@ -1,0 +1,4 @@
+.question {
+	grid-area: question;
+	border: 1px solid #444;
+}
