@@ -3,8 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const isDev = process.env.NODE_ENV === 'development';
-const isProd = !isDev;
+const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -46,7 +45,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName:  isDev ? "[name]__[local]--[hash:base64:5]" : '[hash:base64]',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
               }
             },
           },
