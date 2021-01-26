@@ -1,4 +1,9 @@
-.answers {
-	grid-area: answers;
-	border: 1px solid #444;
+.answer {
+	padding: 0.5rem 1rem;
+	list-style: none;
+}
+
+.indicator {
+	margin-right: 1rem;
+	font-size: 1.2em;
 }

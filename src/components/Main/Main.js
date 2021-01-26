@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Main.css';
 import Question from './Question/Question';
 import Answers from './Answers/Answers';
-import CustomButton from './CustomButton/CustomButton';
+import CustomButton from '../UI/CustomButton/CustomButton';
 import SelectedAnswer from './SelectedAnswer/SelectedAnswer';
 
 const main = (props) => {

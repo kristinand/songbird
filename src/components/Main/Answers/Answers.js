@@ -1,11 +1,15 @@
 import React from 'react';
-import classes from './Answers.css'
+import classes from './Answers.css';
+import Card from '../../UI/Card/Card'
 
 const answers = (props) => {
+  const answers = ['Воробей', 'Синица', 'Дятел', 'Голубь', 'Галка', 'Ворона'];
   return (
-    <div className={classes.answers}>
-      <h1>Answers</h1>
-    </div>
+    <Card style={{padding: 0, gridArea: answers}}>
+      <ul>
+        {answers.map(answer => <li className={classes.answer} key={answer}><span className={classes.indicator}>♪</span>{answer}</li>)}
+      </ul>
+    </Card>
   );
 };
 
