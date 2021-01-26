@@ -6,7 +6,7 @@ const header = (props) => {
   const birdTypes = ['Воробьиные', 'Певчие', 'Врановые', 'Хищные'];
   let score = 0;
   return (
-    <div className={classes.header}>
+    <header className={classes.header}>
       <div className={classes.top}>
 				<img className={classes.logo} src={logo} alt={logo} width="200px"/>
 				<p className={classes.score}>Score: {score}</p>
@@ -14,7 +14,7 @@ const header = (props) => {
       <ul className={classes.birdTypesList}>
         {birdTypes.map((birdType) => <li className={classes.birdTypes} key={birdType}>{birdType}</li>)}
       </ul>
-    </div>
+    </header>
   );
 };
 

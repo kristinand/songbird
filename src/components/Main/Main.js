@@ -7,12 +7,12 @@ import BirdInfo from './BirdInfo/BirdInfo';
 
 const main = (props) => {
 	return (
-		<div className={classes.Main}>
+		<main className={classes.main}>
 			<Question />
 			<Answers />
 			<BirdInfo />
-			<CustomButton>Next Question</CustomButton>
-		</div>
+			<CustomButton disabled={true}>Следующий вопрос</CustomButton>
+		</main>
 	)
 }
 
