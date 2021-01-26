@@ -27,6 +27,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'src/assets/favicon.ico'), to: path.resolve(__dirname, 'public/assets') },
+        { from: path.resolve(__dirname, 'src/assets/fonts/Raleway-Regular.ttf'), to: path.resolve(__dirname, 'public/assets/fonts') },
       ],
     }),
   ],
@@ -52,7 +53,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
+        test: /\.(png|jpg|svg|gif|mp3)$/,
         type: 'asset/resource',
       },
       {
