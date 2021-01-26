@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="assets/favicon.ico" type="image/ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/favicon.ico" type="image/ico" />
+    <link rel="stylesheet" href="style.css" />
 
-	<title>Songbird</title>
-</head>
-<body>
-	<div id="root"></div>
-</body>
+    <title>Songbird</title>
+    <style>
+      @font-face {
+        font-family: 'Raleway';
+        src: url('../assets/fonts/Raleway-Regular.ttf') format('truetype');
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #333;
+      }
+      #root {
+        color: #fff;
+        font-family: 'Raleway', sans-serif;
+        min-width: 320px;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
