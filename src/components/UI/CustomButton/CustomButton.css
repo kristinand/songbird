@@ -5,7 +5,7 @@
 	font-family: 'Raleway', sans-serif;
 	color: white;
 	background-color: #008966;
-	border: 1px solid #444;
+	border: 1px solid #555;
 	border-radius: 0.3em;
 	cursor: pointer;
 }
@@ -20,5 +20,5 @@ button[disabled] {
 }
 
 button[disabled]:hover {
-	background-color: rgba(2,2,2,0.15);
+	background-color: transparent;
 }
