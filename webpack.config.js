@@ -15,7 +15,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.json'],
-    alias: {},
+    // alias: {
+    //   '@assets': path.resolve(__dirname, 'src/assets')
+    // },
   },
   plugins: [
     new HTMLWebpackPlugin({
@@ -37,7 +39,22 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName:  isDev ? "[name]__[local]--[hash:base64:5]" : '[hash:base64]',
+              }
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|svg|gif)$/,
+        type: 'asset/resource',
       },
       {
         test: /\.(ttf|woff|woff2|eot)$/,
