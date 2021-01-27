@@ -4,6 +4,10 @@
 	cursor: pointer;
 }
 
+.answer:not(:last-child) {
+	border-bottom: 1px solid #555;
+}
+
 .answer:hover {
 	background-color: #555;
 }
