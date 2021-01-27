@@ -1,11 +1,14 @@
 import React from 'react';
-import classes from './SelectedAnswer.css'
+import classes from './SelectedAnswer.css';
+import Card from '../../UI/Card/Card'
 
 const selectedAnswer = (props) => {
+  let answer = <p>Прослушайте аудио и выберите ответ</p>;
+
   return (
-    <div className={classes.selectedAnswer}>
-      <h1>Selected answer</h1>
-    </div>
+    <Card style={{gridArea: 'answer'}}>
+      {answer}
+    </Card>
   );
 };
 
