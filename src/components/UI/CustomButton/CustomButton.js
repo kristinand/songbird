@@ -3,7 +3,7 @@ import classes from './CustomButton.css'
 
 const customButton = (props) => {
   return (
-		<button className={classes.button} disabled={props.disabled} onClick={() => {}}>{props.children}</button>
+		<button className={classes.button} disabled={props.disabled || false} onClick={() => {}}>{props.children}</button>
   );
 };
 
