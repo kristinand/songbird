@@ -1,0 +1,12 @@
+.finalScreen {
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.text {
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+}
