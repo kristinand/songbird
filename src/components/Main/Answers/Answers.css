@@ -16,3 +16,13 @@
 	margin-right: 1rem;
 	font-size: 1.2em;
 }
+
+.wrong {
+	color: #d62c1a;
+	text-shadow: 1px 1px 7px #d62c1a;
+}
+
+.correct {
+	color: #00bc8c;
+	text-shadow: 1px 1px 7px #00bc8c;
+}

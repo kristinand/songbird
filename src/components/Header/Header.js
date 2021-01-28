@@ -1,18 +1,25 @@
 import React from 'react';
 import logo from '@assets/logo.png';
 import classes from './Header.css';
+import { birdTypes } from '../../data/birds';
 
 const header = (props) => {
-  const birdTypes = ['Воробьиные', 'Певчие', 'Врановые', 'Хищные'];
   let score = 0;
   return (
     <header className={classes.header}>
       <div className={classes.top}>
-				<img className={classes.logo} src={logo} alt={logo} width="200px"/>
-				<p className={classes.score}>Score: {score}</p>
-			</div>
+        <img className={classes.logo} src={logo} alt={logo} width="200px" />
+        <p className={classes.score}>Score: {score}</p>
+      </div>
       <ul className={classes.birdTypesList}>
-        {birdTypes.map((birdType) => <li className={classes.birdTypes} key={birdType}>{birdType}</li>)}
+        {birdTypes.map((birdType, index) => (
+          <li
+            className={[classes.birdTypes, index === props.stage ? classes.active : ''].join(' ')}
+            key={birdType}
+          >
+            {birdType}
+          </li>
+        ))}
       </ul>
     </header>
   );
