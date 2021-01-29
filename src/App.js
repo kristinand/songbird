@@ -6,23 +6,33 @@ import Main from './components/Main/Main';
 class App extends Component {
   state = {
     stage: 0,
-    isGameOver: false
+    score: 10,
+    isGameOver: false,
+  };
+
+  componentDidUpdate() {
+    console.log('Main', this.state.stage, this.state.isGameOver);
   }
 
   getNextStage = () => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       if (prevState.stage < 5) {
-        return {stage: prevState.stage + 1}
+        return { stage: prevState.stage + 1 };
+      } else {
+        return { isGameOver: true };
       }
-    })
-  }
+    });
+  };
 
   render() {
     return (
       <Fragment>
         <Header stage={this.state.stage} />
-        <Main onNextStageHandler={this.getNextStage} stage={this.state.stage}/>
-        {this.state.isGameOver ? <FinalScreen score={30} /> : '' }
+        {this.state.isGameOver ? (
+          <FinalScreen score={this.state.score} />
+        ) : (
+          <Main onNextStageHandler={this.getNextStage} stage={this.state.stage} />
+        )}
       </Fragment>
     );
   }
