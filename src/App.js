@@ -10,10 +10,6 @@ class App extends Component {
     isGameOver: false,
   };
 
-  componentDidUpdate() {
-    console.log('Main', this.state.stage, this.state.isGameOver);
-  }
-
   getNextStage = () => {
     this.setState((prevState) => {
       if (prevState.stage < 5) {
