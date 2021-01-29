@@ -4,7 +4,7 @@ import classes from './Audio.css';
 
 const audio = (props) => {
   return (
-    <audio ref={audio} className={classes.audio} controls src={props.audio}>
+    <audio className={classes.audio} controls src={props.audio}>
       Your browser does not support the <code>audio</code> element.
     </audio>
   );
