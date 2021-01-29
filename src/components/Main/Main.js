@@ -29,7 +29,7 @@ const main = (props) => {
   return (
     <main className={classes.main}>
       <Question bird={correctAnswer} isAnswerGuessed={isAnswerGuessed}/>
-      <Answers answers={answers} correctAnswer={correctAnswer.name} getAnswer={selectedAnswerHandler}/>
+      <Answers answers={answers} isAnswerGuessed={isAnswerGuessed} correctAnswer={correctAnswer.name} getAnswer={selectedAnswerHandler}/>
       <SelectedAnswer />
       <CustomButton clicked={props.onNextStageHandler} disabled={!isAnswerGuessed}>Следующий вопрос</CustomButton>
     </main>
