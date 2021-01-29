@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Header stage={this.state.stage} />
+        <Header stage={this.state.stage} score={this.state.score} />
         {this.state.isGameOver ? (
           <FinalScreen score={this.state.score} />
         ) : (
