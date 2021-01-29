@@ -11,8 +11,8 @@ function getRandomNumber(min, max) {
 }
 
 const main = (props) => {
-	const [correctAnswer, setCorrectAnswer] = useState('');
-	const [isAnswerGuessed, setIsAnswerGuessed] = useState(false)
+	const [correctAnswer, setCorrectAnswer] = useState(birdData[0][getRandomNumber(0,6)]);
+	const [isAnswerGuessed, setIsAnswerGuessed] = useState(false);
 
 	const stage = props.stage;
 	const answers = birdData[stage].map(birds => birds.name);
@@ -28,7 +28,7 @@ const main = (props) => {
 
   return (
     <main className={classes.main}>
-      <Question randomBird={correctAnswer} />
+      <Question bird={correctAnswer} />
       <Answers answers={answers} correctAnswer={correctAnswer.name} getAnswer={selectedAnswerHandler}/>
       <SelectedAnswer />
       <CustomButton clicked={props.onNextStageHandler} disabled={!isAnswerGuessed}>Следующий вопрос</CustomButton>

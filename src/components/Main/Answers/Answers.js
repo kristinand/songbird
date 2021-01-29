@@ -4,7 +4,7 @@ import Card from '../../UI/Card/Card'
 
 const answers = (props) => {
 
-  const clicked = (event) => {
+  const onSelectBirdHandler = (event) => {
     const selectedBirdName = event.target.textContent.replace('♪', '');
     if (selectedBirdName === props.correctAnswer) {
       event.target.firstElementChild.className = [classes.indicator, classes.correct].join(' ');
@@ -18,7 +18,7 @@ const answers = (props) => {
     <Card style={{padding: 0, gridArea: 'answers'}}>
       <ul>
         {props.answers.map(answer => (
-          <li onClick={clicked} className={classes.answer} key={answer}>
+          <li onClick={onSelectBirdHandler} className={classes.answer} key={answer}>
             <span className={classes.indicator}>♪</span>{answer} 
           </li>
         ))}
