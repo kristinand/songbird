@@ -19,6 +19,7 @@ const main = (props) => {
 
 	useEffect(() => {
 		setCorrectAnswer(birdData[stage][getRandomNumber(0,6)]);
+		setIsAnswerGuessed(false);
 	}, [props.stage]);
 
 	const selectedAnswerHandler = (birdName) => {
