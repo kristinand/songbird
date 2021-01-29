@@ -3,6 +3,7 @@ import classes from './Question.css';
 import hiddenBirdImage from '@assets/bird.png';
 import Audio from './Audio/Audio';
 import Card from '../../UI/Card/Card';
+import ImageContainer from '../../UI/ImageContainer/ImageContainer';
 
 const question = (props) => {
   console.log('hidden bird: ', props.bird.name);
@@ -10,9 +11,7 @@ const question = (props) => {
   const birdImage = props.isAnswerGuessed ? props.bird.pic : hiddenBirdImage;
   return (
     <Card style={{ gridArea: 'question', display: 'flex', gap: '1rem' }}>
-      <div className={classes.imageContainer}>
-        <img className={classes.image} src={birdImage} alt="Bird"/>
-      </div>
+      <ImageContainer birdImage={birdImage} />
       <div className={classes.audioContainer}>
         <h3 className={classes.title}>{birdName}</h3>
         <Audio audio={props.bird.audio} />
