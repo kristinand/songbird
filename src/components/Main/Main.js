@@ -11,8 +11,8 @@ function getRandomNumber(min, max) {
 }
 
 const main = (props) => {
-	const [selectedBirdName, setSelectedBirdName] = useState('');
 	const [correctAnswer, setCorrectAnswer] = useState('');
+	const [isAnswerGuessed, setIsAnswerGuessed] = useState(false)
 
 	const stage = props.stage;
 	const answers = birdData[stage].map(birds => birds.name);
@@ -22,8 +22,7 @@ const main = (props) => {
 	}, [props.stage]);
 
 	const selectedAnswerHandler = (birdName) => {
-		setSelectedBirdName(birdName);
-		console.log(selectedBirdName, correctAnswer);
+		if (!isAnswerGuessed) setIsAnswerGuessed(birdName === correctAnswer.name);
 	}
 
   return (
@@ -31,7 +30,7 @@ const main = (props) => {
       <Question randomBird={correctAnswer} />
       <Answers answers={answers} correctAnswer={correctAnswer.name} getAnswer={selectedAnswerHandler}/>
       <SelectedAnswer />
-      <CustomButton disabled={selectedBirdName !== correctAnswer.name}>Следующий вопрос</CustomButton>
+      <CustomButton clicked={props.onNextStageHandler} disabled={!isAnswerGuessed}>Следующий вопрос</CustomButton>
     </main>
   );
 };

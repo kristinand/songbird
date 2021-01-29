@@ -9,11 +9,19 @@ class App extends Component {
     isGameOver: false
   }
 
+  getNextStage = () => {
+    this.setState(prevState => {
+      if (prevState.stage < 5) {
+        return {stage: prevState.stage + 1}
+      }
+    })
+  }
+
   render() {
     return (
       <Fragment>
         <Header stage={this.state.stage} />
-        <Main stage={this.state.stage}/>
+        <Main onNextStageHandler={this.getNextStage} stage={this.state.stage}/>
         {this.state.isGameOver ? <FinalScreen score={30} /> : '' }
       </Fragment>
     );
