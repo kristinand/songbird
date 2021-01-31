@@ -14,7 +14,7 @@ const question = (props) => {
       <ImageContainer birdImage={birdImage} />
       <div className={classes.audioContainer}>
         <h3 className={classes.title}>{birdName}</h3>
-        <Audio audio={props.bird.audio} />
+        <Audio isAnswerGuessed={props.isAnswerGuessed} audio={props.bird.audio} />
       </div>
     </Card>
   );
