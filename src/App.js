@@ -7,6 +7,7 @@ class App extends Component {
   state = {
     stage: 0,
     score: 0,
+    maxScore: 30,
     isGameOver: false,
   };
 
@@ -21,9 +22,9 @@ class App extends Component {
   };
 
   stageScoreHandler = (stageScore) => {
-    this.setState(prevState => {
-      return { score: prevState.score + stageScore }
-    })
+    this.setState((prevState) => {
+      return { score: prevState.score + stageScore };
+    });
   };
 
   render() {
@@ -31,9 +32,13 @@ class App extends Component {
       <Fragment>
         <Header stage={this.state.stage} score={this.state.score} />
         {this.state.isGameOver ? (
-          <FinalScreen score={this.state.score} />
+          <FinalScreen maxScore={this.state.maxScore} score={this.state.score} />
         ) : (
-          <Main getStageScore={this.stageScoreHandler} onNextStageHandler={this.getNextStage} stage={this.state.stage} />
+          <Main
+            getStageScore={this.stageScoreHandler}
+            onNextStageHandler={this.getNextStage}
+            stage={this.state.stage}
+          />
         )}
       </Fragment>
     );
