@@ -27,12 +27,20 @@ class App extends Component {
     });
   };
 
+  startNewGameHandler = () => {
+    this.setState({
+      stage: 0,
+      score: 0,
+      isGameOver: false,
+    });
+  };
+
   render() {
     return (
       <Fragment>
         <Header stage={this.state.stage} score={this.state.score} />
         {this.state.isGameOver ? (
-          <FinalScreen maxScore={this.state.maxScore} score={this.state.score} />
+          <FinalScreen startNewGame={this.startNewGameHandler} maxScore={this.state.maxScore} score={this.state.score} />
         ) : (
           <Main
             getStageScore={this.stageScoreHandler}
