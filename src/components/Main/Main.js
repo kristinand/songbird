@@ -12,25 +12,27 @@ function getRandomNumber(min, max) {
 
 const main = (props) => {
 	const [correctAnswer, setCorrectAnswer] = useState(birdData[0][getRandomNumber(0,6)]);
+	const [suppossedAnswer, setSuppossedAnswer] = useState('');
 	const [isAnswerGuessed, setIsAnswerGuessed] = useState(false);
 
-	const stage = props.stage;
-	const answers = birdData[stage].map(birds => birds.name);
+	const answers = birdData[props.stage].map(birds => birds.name);
 
 	useEffect(() => {
-		setCorrectAnswer(birdData[stage][getRandomNumber(0,6)]);
+		setCorrectAnswer(birdData[props.stage][getRandomNumber(0,6)]);
 		setIsAnswerGuessed(false);
+		setSuppossedAnswer('');
 	}, [props.stage]);
 
 	const selectedAnswerHandler = (birdName) => {
 		if (!isAnswerGuessed) setIsAnswerGuessed(birdName === correctAnswer.name);
+		setSuppossedAnswer(birdData[props.stage].find(bird => bird.name === birdName));
 	}
 
   return (
     <main className={classes.main}>
       <Question bird={correctAnswer} isAnswerGuessed={isAnswerGuessed}/>
       <Answers answers={answers} isAnswerGuessed={isAnswerGuessed} correctAnswer={correctAnswer.name} getAnswer={selectedAnswerHandler}/>
-      <SelectedAnswer />
+      <SelectedAnswer stage={props.stage} bird={suppossedAnswer} />
       <CustomButton clicked={props.onNextStageHandler} disabled={!isAnswerGuessed}>Следующий вопрос</CustomButton>
     </main>
   );

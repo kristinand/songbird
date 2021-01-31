@@ -6,7 +6,7 @@ import Main from './components/Main/Main';
 class App extends Component {
   state = {
     stage: 0,
-    score: 10,
+    score: 20,
     isGameOver: false,
   };
 
