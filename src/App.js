@@ -6,7 +6,7 @@ import Main from './components/Main/Main';
 class App extends Component {
   state = {
     stage: 0,
-    score: 20,
+    score: 0,
     isGameOver: false,
   };
 
@@ -20,6 +20,12 @@ class App extends Component {
     });
   };
 
+  stageScoreHandler = (stageScore) => {
+    this.setState(prevState => {
+      return { score: prevState.score + stageScore }
+    })
+  };
+
   render() {
     return (
       <Fragment>
@@ -27,7 +33,7 @@ class App extends Component {
         {this.state.isGameOver ? (
           <FinalScreen score={this.state.score} />
         ) : (
-          <Main onNextStageHandler={this.getNextStage} stage={this.state.stage} />
+          <Main getStageScore={this.stageScoreHandler} onNextStageHandler={this.getNextStage} stage={this.state.stage} />
         )}
       </Fragment>
     );
