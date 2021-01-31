@@ -1,28 +1,28 @@
 .answer {
-	padding: 0.5rem 1rem;
-	list-style: none;
-	cursor: pointer;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  cursor: pointer;
 }
 
 .answer:not(:last-child) {
-	border-bottom: 1px solid #555;
+  border-bottom: 1px solid #555;
 }
 
 .answer:hover {
-	background-color: #555;
+  background-color: #555;
 }
 
 .indicator {
-	margin-right: 1rem;
-	font-size: 1.2em;
+  margin-right: 1rem;
+  font-size: 1.2em;
 }
 
 .wrong {
-	color: #d62c1a;
-	text-shadow: 1px 1px 7px #d62c1a;
+  color: #d62c1a;
+  text-shadow: 1px 1px 7px #d62c1a;
 }
 
 .correct {
-	color: #00bc8c;
-	text-shadow: 1px 1px 7px #00bc8c;
+  color: #00bc8c;
+  text-shadow: 1px 1px 7px #00bc8c;
 }

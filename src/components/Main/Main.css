@@ -1,13 +1,13 @@
 .main {
-	display: grid;
-	gap: 1rem;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas: 'question question' 'answers answer' 'button button';
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'question question' 'answers answer' 'button button';
 }
 
 @media (max-width: 500px) {
-	.main {
-		grid-template-columns: 1fr;
-		grid-template-areas: 'question' 'answers' 'answer' 'button';
-	}
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'question' 'answers' 'answer' 'button';
+  }
 }

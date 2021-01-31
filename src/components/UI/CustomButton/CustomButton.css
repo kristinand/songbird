@@ -1,25 +1,25 @@
 .button {
-	padding: 0.65rem 0;
-	grid-area: button;
-	width: 100%;
-	font-family: 'Raleway', sans-serif;
-	font-size: 1rem;
-	color: white;
-	background-color: #008966;
-	border: 1px solid #555;
-	border-radius: 0.3em;
-	cursor: pointer;
+  padding: 0.65rem 0;
+  grid-area: button;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: white;
+  background-color: #008966;
+  border: 1px solid #555;
+  border-radius: 0.3em;
+  cursor: pointer;
 }
 
 .button:hover {
-	background-color: #00bc8c; 
+  background-color: #00bc8c;
 }
 
 button[disabled] {
-	background-color: transparent;
-	cursor: not-allowed;
+  background-color: transparent;
+  cursor: not-allowed;
 }
 
 button[disabled]:hover {
-	background-color: transparent;
+  background-color: transparent;
 }

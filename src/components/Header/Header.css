@@ -1,36 +1,36 @@
 .header {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .top {
-	margin-bottom: 1rem;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-end;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .score {
-	font-size: 1.4rem;
-	line-height: 1rem;
+  font-size: 1.4rem;
+  line-height: 1rem;
 }
 
 .birdTypesList {
-	display: flex;
-	flex-wrap: wrap;
-	border-radius: 0.3em;
-	overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.3em;
+  overflow: hidden;
 }
 
 .birdTypes {
-	background-color: #008966;
-	list-style: none;
-	text-align: center;
-	flex: 1;
-	padding: 0.5rem;
+  background-color: #008966;
+  list-style: none;
+  text-align: center;
+  flex: 1;
+  padding: 0.5rem;
 }
 
 .active {
-	background-color: #00bc8c;
+  background-color: #00bc8c;
 }
