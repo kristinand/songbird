@@ -6,7 +6,6 @@ import Card from '../../UI/Card/Card';
 import ImageContainer from '../../UI/ImageContainer/ImageContainer';
 
 const question = (props) => {
-  console.log('hidden bird: ', props.bird.name);
   const birdName = props.isAnswerGuessed ? props.bird.name : '*****';
   const birdImage = props.isAnswerGuessed ? props.bird.pic : hiddenBirdImage;
   return (
