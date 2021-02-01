@@ -27,7 +27,6 @@ class Main extends Component {
       })
       console.log('hidden bird: ', updatedCorrectAnswer.name);
     }
-    console.log(this.state.supposedAnswer);
   }
 
   componentDidMount() {
