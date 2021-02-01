@@ -28,9 +28,11 @@
   list-style: none;
   text-align: center;
   flex: 1;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0.3rem;
+  border-bottom: 0.2rem solid #008966;
 }
 
 .active {
-  background-color: #00bc8c;
+  /* background-color: #00bc8c; */
+  border-bottom: 0.2rem solid #00bc8c;
 }
