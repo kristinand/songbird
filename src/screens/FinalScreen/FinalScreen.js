@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../UI/Card/Card';
-import CustomButton from '../UI/CustomButton/CustomButton';
+import Card from '../../components/UI/Card/Card';
+import CustomButton from '../../components/UI/CustomButton/CustomButton';
 import classes from './FinalScreen.css';
 
 const finalScreen = (props) => {

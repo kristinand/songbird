@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classes from './Answers.css';
-import Card from '../../UI/Card/Card';
+import Card from '../UI/Card/Card';
 import wrongSound from '@assets/wrong.mp3';
 import correctSound from '@assets/correct.mp3';
 

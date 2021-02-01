@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import FinalScreen from './components/FinalScreen/FinalScreen';
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import FinalScreen from './screens/FinalScreen/FinalScreen';
+import GameScreen from './screens/GameScreen/GameScreen';
 
 class App extends Component {
   state = {
@@ -42,7 +42,7 @@ class App extends Component {
         {this.state.isGameOver ? (
           <FinalScreen startNewGame={this.startNewGameHandler} maxScore={this.state.maxScore} score={this.state.score} />
         ) : (
-          <Main
+          <GameScreen
             getStageScore={this.stageScoreHandler}
             onNextStageHandler={this.getNextStage}
             stage={this.state.stage}
