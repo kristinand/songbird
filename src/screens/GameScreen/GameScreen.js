@@ -44,7 +44,7 @@ class Main extends Component {
     return (
       <main className={classes.main}>
         <Card style={{gridArea: 'question'}}>
-          <Audio pauseAudio={this.state.isAnswerGuessed} audio={this.state.correctAnswer.audio}/>
+          <Audio autoplay={true} pauseAudio={this.state.isAnswerGuessed} audio={this.state.correctAnswer.audio}/>
         </Card>
         <Answers
           answers={answers}
