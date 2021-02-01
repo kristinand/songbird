@@ -4,7 +4,7 @@ import Card from '../../UI/Card/Card';
 import ImageContainer from '../../UI/ImageContainer/ImageContainer';
 
 const selectedAnswer = (props) => {
-  let answer = <p>Прослушайте аудио и выберите ответ</p>;
+  let answer = <p>Прослушайте аудио и выберите ответ. Максимально возможный счёт за уровень — 5. С каждой попыткой счёт понижается на 1.</p>;
 
   if (props.bird) {
     answer = (
