@@ -1,11 +1,11 @@
 .selectedAnswer {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 200px 1fr;
   grid-template-areas: 'image name' 'desc desc';
 }
 
-@media (min-width: 700px) and (max-width: 950px) {
+@media (min-width: 700px) and (max-width: 1000px) {
 	.selectedAnswer {
 		grid-template-columns: 1fr;
 		grid-template-areas: 'image' 'name' 'desc';
@@ -23,7 +23,7 @@
 	grid-area: image;
 }
 
-@media (min-width: 700px) and (max-width: 950px) {
+@media (min-width: 700px) and (max-width: 1000px) {
 	.imageContainer {
 		margin: 0 auto;
 	}
