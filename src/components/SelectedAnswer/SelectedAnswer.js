@@ -3,6 +3,7 @@ import classes from './SelectedAnswer.css';
 import Audio from '../UI/Audio/Audio';
 import Card from '../UI/Card/Card';
 import ImageContainer from '../UI/ImageContainer/ImageContainer';
+import { birdTypes } from '../../data/birds'
 
 const selectedAnswer = (props) => {
   let answer = (
@@ -12,6 +13,7 @@ const selectedAnswer = (props) => {
     </p>
   );
 
+  const birdType = birdTypes.find(birdType => birdType.type === props.bird.type);
   if (props.bird) {
     answer = (
       <div className={classes.selectedAnswer}>
@@ -23,10 +25,7 @@ const selectedAnswer = (props) => {
           <h4>{props.bird.sname}</h4>
           <Audio audio={props.bird.audio} />
         </div>
-        <p className={classes.desc}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Amet consectetur adipiscing elit duis tristique.
-        </p>
+        <p className={classes.desc}>{birdType.description || ''}</p>
       </div>
     );
   }
