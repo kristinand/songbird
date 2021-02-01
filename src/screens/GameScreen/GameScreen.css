@@ -5,7 +5,7 @@
   grid-template-areas: 'question question' 'answers answer' 'button button';
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .main {
     grid-template-columns: 1fr;
     grid-template-areas: 'question' 'answers' 'answer' 'button';

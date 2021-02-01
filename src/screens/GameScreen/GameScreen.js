@@ -52,7 +52,7 @@ class Main extends Component {
         />
         <SelectedAnswer stage={this.props.stage} bird={this.state.supposedAnswer} />
         <CustomButton clicked={this.props.onNextStageHandler} disabled={!this.state.isAnswerGuessed}>
-          Следующий вопрос
+          {this.props.stage < 5 ? 'Следующий вопрос' : 'Завершить игру'}
         </CustomButton>
       </main>
     );
