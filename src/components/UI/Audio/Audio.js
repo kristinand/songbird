@@ -5,7 +5,7 @@ import classes from './Audio.css';
 const audio = (props) => {
   const [audioRef] = useState(React.createRef());
 
-  if (props.isAnswerGuessed) {
+  if (props.pauseAudio) {
     audioRef.current.pause();
   }
 

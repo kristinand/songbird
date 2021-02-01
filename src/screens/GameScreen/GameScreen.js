@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import classes from './GameScreen.css';
-import Question from '../../components/Question/Question';
 import Answers from '../../components/Answers/Answers';
 import CustomButton from '../../components/UI/CustomButton/CustomButton';
 import SelectedAnswer from '../../components/SelectedAnswer/SelectedAnswer';
 import { birdData } from '../../data/birds';
+import Card from '../../components/UI/Card/Card';
+import Audio from '../../components/UI/Audio/Audio';
 
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
@@ -42,7 +43,9 @@ class Main extends Component {
     const answers = birdData[this.props.stage].map((birds) => birds.name);
     return (
       <main className={classes.main}>
-        <Question bird={this.state.correctAnswer} isAnswerGuessed={this.state.isAnswerGuessed} />
+        <Card style={{gridArea: 'question'}}>
+          <Audio pauseAudio={this.state.isAnswerGuessed} audio={this.state.correctAnswer.audio}/>
+        </Card>
         <Answers
           answers={answers}
           isAnswerGuessed={this.state.isAnswerGuessed}
