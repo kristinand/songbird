@@ -9,11 +9,15 @@ const question = (props) => {
   const birdName = props.isAnswerGuessed ? props.bird.name : '*****';
   const birdImage = props.isAnswerGuessed ? props.bird.pic : hiddenBirdImage;
   return (
-    <Card style={{ gridArea: 'question', display: 'flex', gap: '1rem' }}>
-      <ImageContainer birdImage={birdImage} />
-      <div className={classes.audioContainer}>
-        <h3 className={classes.title}>{birdName}</h3>
-        <Audio isAnswerGuessed={props.isAnswerGuessed} audio={props.bird.audio} />
+    <Card style={{gridArea: 'question'}}>
+      <div className={classes.question}>
+        <div className={classes.imageContainer}>
+          <ImageContainer birdImage={birdImage} />
+        </div>
+        <div className={classes.audioContainer}>
+          <h3 className={classes.title}>{birdName}</h3>
+          <Audio isAnswerGuessed={props.isAnswerGuessed} audio={props.bird.audio} />
+        </div>
       </div>
     </Card>
   );

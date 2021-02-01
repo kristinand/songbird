@@ -7,7 +7,7 @@ const header = (props) => {
   return (
     <header className={classes.header}>
       <div className={classes.top}>
-        <img className={classes.logo} src={logo} alt={logo} width="200px" />
+        <img className={classes.logo} src={logo} alt={logo} />
         <p className={classes.score}>Счёт иргы: {props.score || 0}</p>
       </div>
       <ul className={classes.birdTypesList}>

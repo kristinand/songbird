@@ -16,7 +16,10 @@ const finalScreen = (props) => {
             <CustomButton  clicked={props.startNewGame}>Попробовать еще раз!</CustomButton>
           </div>
         ) : (
-          <p className={classes.text}>Вы прошли викторину и набрали максимальное количество очков!</p>
+          <div>
+            <p className={classes.text}>Вы прошли викторину и набрали максимальное количество очков!</p>
+            <CustomButton  clicked={props.startNewGame}>Сыграть еще раз!</CustomButton>
+          </div>
         )}
       </div>
     </Card>

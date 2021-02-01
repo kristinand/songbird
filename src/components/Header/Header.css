@@ -2,6 +2,16 @@
   margin-bottom: 1rem;
 }
 
+.logo {
+  width: 200px;
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width: 46%;
+  }
+}
+
 .top {
   margin-bottom: 1rem;
   width: 100%;
@@ -12,7 +22,7 @@
 }
 
 .score {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1rem;
 }
 
@@ -24,15 +34,14 @@
 }
 
 .birdTypes {
-  background-color: #008966;
-  list-style: none;
-  text-align: center;
-  flex: 1;
   padding: 0.5rem 0.5rem 0.3rem;
+  flex: 1;
+  text-align: center;
+  list-style: none;
+  background-color: #008966;
   border-bottom: 0.2rem solid #008966;
 }
 
 .active {
-  /* background-color: #00bc8c; */
   border-bottom: 0.2rem solid #00bc8c;
 }

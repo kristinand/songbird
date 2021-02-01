@@ -21,14 +21,12 @@ const selectedAnswer = (props) => {
         <div className={classes.nameContainer}>
           <h3>{props.bird.name}</h3>
           <h4>{props.bird.sname}</h4>
-        </div>
-        <div className={classes.audioContainer}>
           <Audio audio={props.bird.audio} />
         </div>
-        {/* <p>
+        <p className={classes.desc}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Amet consectetur adipiscing elit duis tristique.
-        </p> */}
+        </p>
       </div>
     );
   }

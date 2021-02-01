@@ -1,9 +1,28 @@
+.question {
+  display: flex;
+  gap: 1rem;
+}
+
 .audioContainer {
   flex: 1;
 }
 
+@media (max-width: 500px) {
+  .question {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
 .title {
   font-size: 2rem;
-  font-weight: normal;
   border-bottom: 1px solid #555;
 }
