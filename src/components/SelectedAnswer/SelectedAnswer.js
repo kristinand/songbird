@@ -13,7 +13,7 @@ const selectedAnswer = (props) => {
     </p>
   );
 
-  const birdType = birdTypes.find(birdType => birdType.type === props.bird.type);
+  const birdType = birdTypes.find(birdType => birdType.type === props.bird.type) || '';
   if (props.bird) {
     answer = (
       <div className={classes.selectedAnswer}>
@@ -25,7 +25,7 @@ const selectedAnswer = (props) => {
           <h4>{props.bird.sname}</h4>
           <Audio audio={props.bird.audio} />
         </div>
-        <p className={classes.desc}>{birdType.description || ''}</p>
+        <p className={classes.desc}>{birdType.description}</p>
       </div>
     );
   }
