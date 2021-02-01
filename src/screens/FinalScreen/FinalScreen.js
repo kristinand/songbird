@@ -11,7 +11,7 @@ const finalScreen = (props) => {
         {props.score < props.maxScore ? (
           <div>
             <p className={classes.text}>
-              Вы прошли викторину и набрали {props.score} очков из {props.maxScore}!
+              Вы прошли викторину и набрали <span className={classes.score}>{props.score}</span> очков из <span className={classes.score}>{props.maxScore}</span>!
             </p>
             <CustomButton  clicked={props.startNewGame}>Попробовать еще раз!</CustomButton>
           </div>
