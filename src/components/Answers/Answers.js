@@ -31,7 +31,7 @@ const answers = (props) => {
   };
 
   return (
-    <Card style={{ padding: 0, gridArea: 'answers' }}>
+    <Card style={{ padding: 0, gridArea: 'answers', height: 'fit-content' }}>
       <ul>
         {props.answers.map((answer) => (
           <li onClick={onSelectBirdHandler} className={classes.answer} key={answer}>

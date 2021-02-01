@@ -50,11 +50,9 @@ h3 {
 
 h4 {
 	margin-bottom: 1rem;
-	padding: 0.2rem;
 	font-size: 1rem;
 	font-weight: normal;
-	border-top: 1px solid #555;
-	border-bottom: 1px solid #555;
+	font-style: italic;
 }
 
 .desc {
