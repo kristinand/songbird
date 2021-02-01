@@ -27,6 +27,7 @@ class Main extends Component {
       })
       console.log('hidden bird: ', updatedCorrectAnswer.name);
     }
+    console.log(this.state.supposedAnswer);
   }
 
   componentDidMount() {
@@ -50,7 +51,7 @@ class Main extends Component {
           getStageScore={this.props.getStageScore}
           getAnswer={this.selectedAnswerHandler}
         />
-        <SelectedAnswer stage={this.props.stage} bird={this.state.suppossedAnswer} />
+        <SelectedAnswer stage={this.props.stage} bird={this.state.supposedAnswer} />
         <CustomButton clicked={this.props.onNextStageHandler} disabled={!this.state.isAnswerGuessed}>
           Следующий вопрос
         </CustomButton>
