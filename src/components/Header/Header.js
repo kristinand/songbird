@@ -13,7 +13,7 @@ const header = (props) => {
       <ul className={classes.birdTypesList}>
         {birdTypes.map((birdType, index) => (
           <li className={[classes.birdTypes, index === props.stage ? classes.active : ''].join(' ')} key={birdType.type}>
-            {birdType.type}
+            {birdType.type.split(" ")[0]}
           </li>
         ))}
       </ul>
